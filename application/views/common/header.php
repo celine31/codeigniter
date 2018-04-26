@@ -1,14 +1,14 @@
 <?php echo doctype('html5'); ?>
 <html>
     <head>
-        <!-- <meta charset=" UTF-8">
-         <meta http-equiv=" X-UA-Compatible " content="IE=edge">
-         <meta name=" viewport" content="width=device-width, initial-scale=1">-->
-        <?php
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible " content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--
         echo meta("UTF-8", "", 'charset');
         echo meta("X-UA-Compatible", "IE=edge", 'http-equiv');
         echo meta("viewport", "width=device-width, initial-scale=1");
-        ?>
+        -->
         <title><?= $title ?> </title>
         <?php
         echo link_tag("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
@@ -37,6 +37,7 @@
                     <ul class="nav navbar-nav">
                         <!--<li><a href="/index.html"> Accueil</a></li>-->
                         <li><?php echo anchor('index', "Accueil"); ?> </li><!--en premier le nom du controller en 2eme le nom a afficher-->
+                        <li><?php echo anchor('presentation', "Présentation");?></li><!--page de presentation-->
                         <li><?php echo anchor('site/contact', "Contact") ?> </li><!--lien vers la page contact-->
                     </ul>
                 </div>
