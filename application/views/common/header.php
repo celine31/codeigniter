@@ -38,7 +38,11 @@
                         <!--<li><a href="/index.html"> Accueil</a></li>-->
                         <li><?php echo anchor('index', "Accueil"); ?> </li><!--en premier le nom du controller en 2eme le nom a afficher-->
                         <li><?php echo anchor('presentation', "Présentation");?></li><!--page de presentation-->
-                        <li><?php echo anchor('site/contact', "Contact") ?> </li><!--lien vers la page contact-->
+                        <li><?php echo anchor('contact', "Contact") ?> </li><!--lien vers la page contact-->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><?php echo anchor('connexion',"Connexion");?></li><!--lien vers connexion-->
+                        <li><?php echo anchor('déconnexion',"Déconnexion");?></li><!--lien vers déconnexion-->
                     </ul>
                 </div>
             </div>
