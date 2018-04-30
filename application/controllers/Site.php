@@ -72,7 +72,7 @@ class Site extends CI_Controller {
         $data["title"]="Panneau de configuration";
         if ($this->auth_user->is_connected) {
             $this->load->view('common/header',$data);
-            $this->load->view('panneau/index',$data);
+            $this->load->view('blog/panneau',$data);
             $this->load->view('common/footer',$data);
         } 
     }

@@ -41,7 +41,8 @@
                         <li><?php echo anchor('contact', "Contact") ?> </li><!--lien vers la page contact-->
                         <?php if ($this->auth_user->is_connected): ?>
                             <li><?php echo anchor('panneau', "Panneau de contrôle"); ?></li><!-- panneau de controle visible en cas de connexion-->
-                        <?php endif ?>
+                            <li><?php echo anchor('blog/index', "Blog"); ?><!--accès au blog après connexion-->
+                            <?php endif ?>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <?php if ($this->auth_user->is_connected): ?>
