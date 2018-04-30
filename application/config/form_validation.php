@@ -33,14 +33,15 @@ $config = array(
     'site/connexion' => array(
         array(
             'field' => 'username',
-            'label' => 'username',
+            'label' => "nom d'utilisateur",
             'rules' => 'required'
         ),
         array(
             'field' => 'password',
-            'label' => 'password',
+            'label' => 'mot de passe',
             'rules' => 'required'
         )
     )
 );
+
 
