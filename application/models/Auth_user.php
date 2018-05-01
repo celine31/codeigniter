@@ -41,7 +41,7 @@ class Auth_user extends CI_Model {
     return $this->_username;
   }
 
-  protected function load_from_session() {
+  protected function load_from_session() {//on charge les informations depuis la session
     if ($this->session->auth_user) {
       $this->_id = $this->session->auth_user['id'];
       $this->_username = $this->session->auth_user['username'];
@@ -50,7 +50,7 @@ class Auth_user extends CI_Model {
     }
   }
 
-  protected function load_user($username) {
+  protected function load_user($username) {//on requete dans la BDD pour l'utilisateur
     return $this->db
             ->select('id, username, password')
             ->from('login')
@@ -60,7 +60,7 @@ class Auth_user extends CI_Model {
             ->first_row();
   }
 
-  public function login($username, $password) {
+  public function login($username, $password) {//on effectue la connexion si ok
     $user = $this->load_user($username);
     if (($user !== NULL) && ($password===$user->password)) {
       $this->_id = $user->id;
@@ -71,12 +71,12 @@ class Auth_user extends CI_Model {
     }
   }
 
-  public function logout() {
+  public function logout() {//on déconnecte
     $this->clear_data();
     $this->clear_session();
   }
 
-  protected function save_session() {
+  protected function save_session() {//on sauve la session
     $this->session->auth_user = [
         'id' => $this->_id,
         'username' => $this->_username
