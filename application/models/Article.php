@@ -85,7 +85,7 @@ class Article extends CI_Model {
 
     public function load($id, $show_hidden = FALSE) {//on charge un article en fonction de son id
         $this->clear_data();
-        $this->db->from('article')->where('id', $id);
+        $this->db->from('article_username')->where('id', $id);
         if (!$show_hidden) {//pour les articles publiés
             $this->db->where('status', 'P');
         }
