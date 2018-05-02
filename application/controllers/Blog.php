@@ -49,4 +49,27 @@ class Blog extends CI_Controller {
         $this->form_validation->set_rules('status', 'Statut', 'required|in_list[' . $list . ']');
     }
 
+    public function article($id = NULL) {
+        if (!is_numeric($id)) {
+            redirect('blog/index');
+        }
+        $this->load->helper('date','url');
+        $this->load->model('article');
+        $this->load->model('article_status');
+        $this->article->load($id, $this->auth_user->is_connected);
+
+        if ($this->article->is_found) {
+            $data['title'] = htmlentities($this->article->title);
+
+            $this->load->view('common/header',$data);
+            $this->load->view('blog/article',$data);
+            $this->load->view('common/footer',$data);
+        } else {
+            redirect('blog/index');
+        }
+    }
+    
+    public function edition($id=NULL){
+        
+    }
 }
