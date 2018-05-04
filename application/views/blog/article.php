@@ -32,7 +32,10 @@
                     <?= anchor('blog/index', "Liste des articles");?>
                 </li>
                 <li>
-                    <?=anchor ('blog/nouvel_article',"Nouvel article");?>
+                    <?=anchor(['blog','editer',$this->article->id],"Modifier l'article");?>
+                </li>
+                <li>
+                    <?=anchor ('blog/editer',"Nouvel article");?>
                 </li>
             </ul>
         </div>

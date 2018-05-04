@@ -27,7 +27,7 @@
                 <div class="col-md-10">
                     <ul class="nav nav-pills nav-justified">
                         <li role="presentation">
-                            <?= anchor('blog/nouvel_article',"Nouvel article");?>
+                            <?= anchor('blog/edition',"Nouvel article");?>
                         </li>
                     </ul>
                 </div>
